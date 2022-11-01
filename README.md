@@ -76,3 +76,20 @@ Sample Input:
 8
 Sample Output:
 NO
+
+
+Problem:6
+Write a C program to take a non-negative integer N and print the pattern as shown below
+For N=5, the pattern should be
+*
+**
+***
+****
+*****
+Sample Input:
+4 
+Sample Output:
+*
+**
+***
+****
