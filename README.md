@@ -57,3 +57,22 @@ Sample Output:
 3 - 1 2 4 5
 4 - 1 2 3 5
 5 - 1 2 3 4
+
+
+Problem:5
+Write a C program to take one positive integer N, the size of an array of unique values as input. Then take an
+integer array of size N as input. After that take another integer target. You need to tell if you can make target by
+adding any two different values from that array.
+Hint: Use nested loop
+Sample Input:
+5 
+2 4 3 6 8
+7
+Sample Output:
+YES
+Sample Input: 
+5 
+2 4 3 1 8
+8
+Sample Output:
+NO
