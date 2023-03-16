@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    int random_newsday[50],random_demand[60],n,i;
+    char types_newsday[n][60],demand[66];
+
+    printf("how many days:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        random_newsday[i]=rand() % 100 + 1;
+    }
+    printf("\ngenerated random digit for newsday are:");
+    for(i=1;i<=n;i++){
+        printf("%d ",random_newsday[i]);
+    }
+
+    for(i=1;i<=n;i++){
+        if(random_newsday[i]>=0 && random_newsday[i]<=35){
+           strcpy(types_newsday[i],"GOOD");
+        }
+        else if(random_newsday[i]<=80){
+            strcpy(types_newsday[i],"FAIR");
+        }
+        else{
+             strcpy(types_newsday[i],"POOR");
+        }
+    }
+     printf("\ntypes of newsday are:");
+    for(i=1;i<=n;i++){
+        printf("%s ",types_newsday[i]);
+    }
+     for(i=1;i<=n;i++){
+        random_demand[i]=rand() % 100 + 1;
+    }
+    printf("\ngenerated random demand for newsday are:");
+    for(i=1;i<=n;i++){
+        printf("%d ",random_demand[i]);
+    }
+    for(i=1;i<=n;i++){
+        
+        char temp_day[]="GOOD";
+        if(strcmp(day,temp_day)==0){
+            if(random_demand[i]>=0 && random_demand[i]<=3){
+                demand[i]=40;
+            }
+            else if(random_demand[i]<=8){
+                demand[i]=50;
+            }
+            else if(random_demand[i]<=23){
+                demand[i]=60;
+            }
+            else if(random_demand[i]<=43){
+                demand[i]=70;
+            }
+            else if(random_demand[i]<=78){
+                demand[i]=80;
+            }
+            else if(random_demand[i]<=93){
+                demand[i]=90;
+            }
+            else if(random_demand[i]<=100){
+                demand[i]=100;
+            }
+        }
+        else if(strcmp(types_newsday[i],'FAIR')==0){
+                if(random_demand[i]>=0 && random_demand[i]<=10){
+                demand[i]=40;
+            }
+            else if(random_demand[i]<=28){
+                demand[i]=50;
+            }
+            else if(random_demand[i]<=63){
+                demand[i]=60;
+            }
+            else if(random_demand[i]<=88){
+                demand[i]=70;
+            }
+            else if(random_demand[i]<=96){
+                demand[i]=80;
+            }
+            else if(random_demand[i]<=100){
+                demand[i]=90;
+            }
+    }
+    else if(strcmp(types_newsday[i],'poor')==0){
+                if(random_demand[i]>=0 && random_demand[i]<=44){
+                demand[i]=40;
+            }
+            else if(random_demand[i]<=66){
+                demand[i]=50;
+            }
+            else if(random_demand[i]<=82){
+                demand[i]=60;
+            }
+            else if(random_demand[i]<=94){
+                demand[i]=70;
+            }
+            else if(random_demand[i]<=100){
+                demand[i]=80;
+            }
+}
+    }
+    printf("\ndemand for newsday are:\n");
+    for(i=1;i<=n;i++){
+        printf("%d ",demand[i]);
+    }
+}
